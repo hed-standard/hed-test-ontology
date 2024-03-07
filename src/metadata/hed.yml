@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/hed
+
+idspace: HED
+base_url: /obo/hed
+
+products:
+- hed.owl: https://raw.githubusercontent.com/hed-standard/hed-ontology-test/main/hed.owl
+- hed.obo: https://raw.githubusercontent.com/hed-standard/hed-ontology-test/main/hed.obo
+
+term_browser: ontobee
+example_terms:
+- HED_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/hed-standard/hed-ontology-test/v
+
+- prefix: /tracker/
+  replacement: https://github.com/hed-standard/hed-ontology-test/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/HED?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/hed-standard/hed-ontology-test/main/
+
